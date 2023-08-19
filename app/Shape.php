@@ -1,3 +1,6 @@
+<!-- Create classes to represent geometric shapes, including circles and rectangles.
+ Implement methods for area calculation -->
+
 <?php
 class Shape
 {
@@ -15,7 +18,6 @@ class Shape
 
     public function calculateArea()
     {
-        // This method will be overridden in the subclasses
         return 0;
     }
 }
@@ -59,4 +61,4 @@ $circle = new Circle(3);
 $rectangle = new Rectangle(2, 4);
 
 echo $circle->getName() . " Area: " . $circle->calculateArea() . PHP_EOL;
-echo $rectangle->getName() . " Area: " . $rectangle->calculateArea() . PHP_EOL;
+echo $rectangle->getName() . " Area: " . $rectangle->calculateArea();
