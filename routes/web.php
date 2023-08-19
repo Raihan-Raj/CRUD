@@ -4,8 +4,6 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\BookCategoryController;
 use App\Http\Controllers\BookListController;
-use App\Http\Controllers\HomeController;
-use App\Models\BookList;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -20,9 +18,16 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    $circle = new Circle(3);
+    $rectangle = new Rectangle(2, 4);
+
+    echo $circle->getName() . " Area: " . $circle->calculateArea() . PHP_EOL;
+    echo $rectangle->getName() . " Area: " . $rectangle->calculateArea() . PHP_EOL;
 });
+
+
 
 Auth::routes();
 
